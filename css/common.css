@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* コピペ用コード */
+:root {
+  /* フォントサイズ */
+  --font-10: 0.625rem; /* 12px */
+  --font-12: 0.75rem; /* 12px */
+  --font-13: 0.8125rem; /* 13px */
+  --font-14: 0.875rem; /* 14px */
+  --font-16: 1rem; /* 16px */
+  --font-20: 1.25rem; /* 20px */
+  --font-24: 1.5rem; /* 24px */
+  --font-28: 1.75rem; /* 28px */
+
+  /* 文字カラー */
+  --font-color: #333;
+
+  /* ラインカラー */
+  --line-color: #c3c3c3;
+
+  /* ボタンカラー */
+  --btn-color: #4b4b4b;
+}
+
+/* メディアクエリ */
+/* @media screen and (max-width: 896px) {
+} */
+
+/* 共通 */
