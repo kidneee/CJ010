@@ -10,12 +10,17 @@
   --font-20: 1.25rem; /* 20px */
   --font-24: 1.5rem; /* 24px */
   --font-28: 1.75rem; /* 28px */
+  --font-36: 2.25rem; /* 36px */
 
   /* 文字カラー */
-  --font-color: #333;
+  --font-black: #000;
+  --font-white: #fff;
 
   /* ラインカラー */
-  --line-color: #c3c3c3;
+  --line-color: #000;
+
+  /* 背景色 */
+  --bg-color: #f0f0f0;
 
   /* ボタンカラー */
   --btn-color: #4b4b4b;
@@ -26,3 +31,252 @@
 } */
 
 /* 共通 */
+body {
+  font-family: 'HiraginoKakuGothicProN-W3', 'sans-serif';
+  color: var(--font-color);
+  font-weight: 300;
+}
+
+a {
+  color: var(--font-color);
+}
+
+/* 背景 */
+.header,
+.main {
+  background: var(--bg-color);
+}
+
+/* タイトル */
+.sec__ttl {
+  font-size: var(--font-36);
+  line-height: 1;
+  letter-spacing: 0.3em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.sec__ttl::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--line-color);
+  position: absolute;
+}
+
+.sec__sub-ttl {
+  display: block;
+  font-size: var(--font-14);
+  letter-spacing: 0;
+  margin-top: 10px;
+  padding-bottom: 36px;
+}
+
+/* コンテンツ幅 */
+.sec__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 文字サイズ */
+.news__desc,
+.about__desc {
+  font-size: var(--font-14);
+}
+
+/* header  */
+.header__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding-left: 14%;
+}
+
+.header__logo {
+  margin-right: 60px;
+}
+
+.gnav__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-transform: uppercase;
+  margin-left: auto;
+  font-size: var(--font-14);
+}
+
+/* 問い合わせボタン */
+.header-contact__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  width: 200px;
+  height: 80px;
+  color: #fff;
+  font-size: var(--font-12);
+  margin-left: auto;
+}
+
+/* main */
+/* main-visual */
+.main-visual {
+  margin-bottom: 120px;
+}
+
+.main-visual__img {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: cover;
+}
+
+/* news */
+.news__inner {
+  margin-bottom: 120px;
+}
+
+.news__ttl {
+  margin-bottom: 60px;
+}
+
+.news__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.news__item {
+  padding: 10px 0;
+}
+
+.news__item:not(:first-of-type) {
+  border-left: 1px solid var(--line-color);
+  padding-left: 20px;
+}
+
+.news__date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.news__label {
+  display: block;
+  width: 50px;
+  height: 20px;
+  font-size: var(--font-12);
+  color: var(--font-white);
+  text-align: center;
+  line-height: 20px;
+  background: #000;
+}
+
+.news__desc {
+  font-size: var(--font-14);
+}
+
+/* about */
+.about__inner {
+  margin-bottom: 120px;
+  display: flex;
+  gap: 5%;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.about__inner--right {
+  margin-top: 180px;
+  padding-right: 5%;
+}
+
+.about__inner--left {
+  margin-right: auto;
+}
+
+.about__ttl {
+  margin-bottom: 50px;
+}
+
+.about__desc {
+  line-height: 2.2;
+}
+
+.about__img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* business */
+.business__inner {
+  margin-bottom: 120px;
+}
+
+.business__ttl {
+  margin-bottom: 50px;
+}
+
+.business__list {
+  display: flex;
+  align-content: flex-start;
+  gap: 50px 64px;
+  height: 677px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+
+.business__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 368px;
+}
+
+.business__item:first-child {
+  margin-top: 80px;
+}
+
+.business .item__ttl {
+  font-size: var(--font-14);
+  font-weight: 600;
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.business .item__ttl::before {
+  content: '-';
+  position: absolute;
+  left: -10px;
+}
+
+/* company */
+.company__inner {
+  display: flex;
+  height: 567px;
+  /* position: relative; */
+}
+
+.company__ttl {
+  margin-bottom: 50px;
+}
+
+.company__inner--left {
+  max-width: 567px;
+  padding: 100px 0 100px 62px;
+  background: #fff;
+  /* position: absolute; */
+}
+
+.company__inner--right {
+  max-width: 547px;
+  height: 400px;
+  /* position: absolute; */
+}
+
+.company__img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}

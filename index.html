@@ -21,18 +21,16 @@
 
         <!-- gnav -->
         <nav class="gnav" aria-label="グローバルナビゲーション">
-          <!-- gnav__list gnav__list--left -->
-          <ul class="gnav__list gnav__list--left">
+          <!-- gnav__list -->
+          <ul class="gnav__list">
             <li class="gnav__item"><a href="#news" class="gnav__link">News</a></li>
             <li class="gnav__item"><a href="#about" class="gnav__link">About</a></li>
             <li class="gnav__item"><a href="#business" class="gnav__link">Business</a></li>
             <li class="gnav__item"><a href="#company" class="gnav__link">Company</a></li>
           </ul>
-          <!-- gnav__list gnav__list--right -->
-          <ul class="gnav__list gnav__list--right">
-            <li class="gnav__item"><a href="#contact">お問い合わせ</a></li>
-          </ul>
         </nav>
+        <!-- 問い合わせボタン -->
+        <a href="#contact" class="header-contact__btn">お問い合わせ</a>
       </div>
     </header>
 
@@ -47,76 +45,78 @@
         <div class="news__inner sec__inner">
           <h2 class="news__ttl sec__ttl">
             News
-            <span>ニュース</span>
+            <span class="sec__sub-ttl">ニュース</span>
           </h2>
-
+          <!-- news__list -->
           <dl class="news__list">
             <div class="news__item">
-              <dt>
+              <dt class="news__date">
                 <time datetime="2021-01-01">2021.01.01</time>
                 <span class="news__label">News</span>
               </dt>
-              <dd>タイトルタイトルタイトルタイトル</dd>
+              <dd class="news__desc">タイトルタイトルタイトルタイトル</dd>
             </div>
             <div class="news__item">
-              <dt>
+              <dt class="news__date">
                 <time datetime="2021-01-01">2021.01.01</time>
                 <span class="news__label">Press</span>
               </dt>
-              <dd>タイトルタイトルタイトルタイトル</dd>
+              <dd class="news__desc">タイトルタイトルタイトルタイトル</dd>
             </div>
             <div class="news__item">
-              <dt>
+              <dt class="news__date">
                 <time datetime="2021-01-01">2021.01.01</time>
                 <span class="news__label">News</span>
               </dt>
-              <dd>タイトルタイトルタイトルタイトル</dd>
+              <dd class="news__desc">タイトルタイトルタイトルタイトル</dd>
             </div>
           </dl>
         </div>
       </section>
 
-      <section id="about" class="about">
+      <!-- about -->
+      <section id="about" class="about sec">
         <div class="about__inner sec__inner">
-          <h2 class="about__ttl sec__ttl">
-            About
-            <span>私たちについて</span>
-          </h2>
-          <div class="about__txt">
+          <div class="about__inner--right">
+            <h2 class="about__ttl sec__ttl">
+              About
+              <span class="sec__sub-ttl">私たちについて</span>
+            </h2>
             <p class="about__desc">
               テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト<br />
               テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト<br />
               テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト<br />
             </p>
           </div>
-          <div class="about__img">
-            <img src="./img/about.jpg" alt="" />
+          <div class="about__inner--left">
+            <img src="./img/about.jpg" class="about__img about__inner--left" width="770" height="400" alt="" />
           </div>
         </div>
       </section>
 
+      <!-- business -->
       <section id="business" class="business">
-        <div class="sec__inner">
-          <h2 class="sec__ttl">
+        <div class="business__inner sec__inner">
+          <h2 class="business__ttl sec__ttl">
             Business
-            <span>事業内容</span>
+            <span class="sec__sub-ttl">事業内容</span>
           </h2>
-
+          <!-- business__list -->
           <ul class="business__list">
             <li class="business__item">
-              Web制作・マーケティング
+              <span class="item__ttl">Web制作・マーケティング</span>
               <img src="./img/business1.jpg" width="368" height="232" class="business__img" alt="Web制作・マーケティング" />
             </li>
             <li class="business__item">
-              インターネットメディア事業
+              <span class="item__ttl">インターネットメディア事業</span>
               <img src="./img/business2.jpg" width="368" height="232" class="business__img" alt="インターネットメディア事業" />
             </li>
             <li class="business__item">
-              プロモーション企画・制作
+              <span class="item__ttl">プロモーション企画・制作</span>
               <img src="./img/business3.jpg" width="368" height="232" class="business__img" alt="プロモーション企画・制作" />
             </li>
             <li class="business__item">
-              ソーシャル企画・運営
+              <span class="item__ttl">ソーシャル企画・運営</span>
               <img src="./img/business4.jpg" width="368" height="232" class="business__img" alt="ソーシャル企画・運営" />
             </li>
           </ul>
@@ -124,45 +124,52 @@
       </section>
 
       <section id="company" class="company">
-        <div class="sec__inner">
-          <h2 class="sec__ttl">
-            Company
-            <span>会社情報</span>
-          </h2>
-
-          <dl class="company__list">
-            <div class="company__item">
-              <dt>会社名</dt>
-              <dd>ウェブエンターテイメントデザイン株式会社</dd>
-            </div>
-            <div class="company__item">
-              <dt>所在地</dt>
-              <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
-            </div>
-            <div class="company__item">
-              <dt>代表</dt>
-              <dd>ＸＸＸＸＸＸ</dd>
-            </div>
-            <div class="company__item">
-              <dt>設立</dt>
-              <dd>2021年1月1日</dd>
-            </div>
-            <div class="company__item">
-              <dt>資本金</dt>
-              <dd>3,000,000円</dd>
-            </div>
-            <div class="company__item">
-              <dt>事業内容</dt>
-              <dd>
-                <ul>
-                  <li>Web制作・マーケティング</li>
-                  <li>インターネットメディア事業</li>
-                  <li>プロモーション企画・制作</li>
-                  <li>ソーシャル企画・運営</li>
-                </ul>
-              </dd>
-            </div>
-          </dl>
+        <div class="company__inner sec__inner">
+          <!-- company__inner--left -->
+          <div class="company__inner--left">
+            <h2 class="company__ttl sec__ttl">
+              Company
+              <span class="sec__sub-ttl">会社情報</span>
+            </h2>
+            <!-- company__list -->
+            <dl class="company__list">
+              <div class="company__item">
+                <dt>会社名</dt>
+                <dd>ウェブエンターテイメントデザイン株式会社</dd>
+              </div>
+              <div class="company__item">
+                <dt>所在地</dt>
+                <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
+              </div>
+              <div class="company__item">
+                <dt>代表</dt>
+                <dd>ＸＸＸＸＸＸ</dd>
+              </div>
+              <div class="company__item">
+                <dt>設立</dt>
+                <dd>2021年1月1日</dd>
+              </div>
+              <div class="company__item">
+                <dt>資本金</dt>
+                <dd>3,000,000円</dd>
+              </div>
+              <div class="company__item">
+                <dt>事業内容</dt>
+                <dd>
+                  <ul>
+                    <li>Web制作・マーケティング</li>
+                    <li>インターネットメディア事業</li>
+                    <li>プロモーション企画・制作</li>
+                    <li>ソーシャル企画・運営</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <!-- company__inner--right -->
+          <div class="company__inner--right">
+            <img src="./img/company.jpg" class="company__img" />
+          </div>
         </div>
       </section>
     </main>
