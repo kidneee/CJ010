@@ -73,14 +73,17 @@ a {
 }
 
 /* コンテンツ幅 */
-.sec__inner {
-  max-width: 1000px;
+.sec__inner,
+.footer__inner {
+  max-width: 1032px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
 /* 文字サイズ */
 .news__desc,
-.about__desc {
+.about__desc,
+.footer__address {
   font-size: var(--font-14);
 }
 
@@ -90,7 +93,7 @@ a {
   align-items: center;
   width: 100%;
   height: 80px;
-  padding-left: 14%;
+  padding-left: 100px;
 }
 
 .header__logo {
@@ -120,6 +123,9 @@ a {
 }
 
 /* main */
+.main {
+  padding-bottom: 128px;
+}
 /* main-visual */
 .main-visual {
   margin-bottom: 120px;
@@ -159,6 +165,8 @@ a {
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
+  font-size: var(--font-14);
+  line-height: 1.5;
 }
 
 .news__label {
@@ -188,6 +196,7 @@ a {
 .about__inner--right {
   margin-top: 180px;
   padding-right: 5%;
+  /* padding-left: 70px; */
 }
 
 .about__inner--left {
@@ -254,8 +263,10 @@ a {
 /* company */
 .company__inner {
   display: flex;
-  height: 567px;
-  /* position: relative; */
+  width: 100%;
+  height: 622px;
+  position: relative;
+  padding: 0;
 }
 
 .company__ttl {
@@ -263,20 +274,72 @@ a {
 }
 
 .company__inner--left {
-  max-width: 567px;
-  padding: 100px 0 100px 62px;
+  padding: 100px 139px 100px 62px;
+  width: 567px;
   background: #fff;
-  /* position: absolute; */
+  position: absolute;
+  height: 100%;
+}
+
+.company__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--font-14);
+}
+
+.company__item {
+  display: flex;
+  line-height: 1.5;
+}
+
+.company__term {
+  width: 23%;
+}
+
+.company__desc {
+  width: 77%;
+}
+
+.company__list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .company__inner--right {
   max-width: 547px;
   height: 400px;
-  /* position: absolute; */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .company__img {
   width: 100%;
   height: 400px;
   object-fit: cover;
+}
+
+/* footer  */
+.footer__inner {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.footer__inner--top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer__address {
+  line-height: 1.5;
+}
+
+.footer__copyright {
+  font-size: var(--font-10);
+  line-height: 1.5;
 }
